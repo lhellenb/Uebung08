@@ -7,11 +7,11 @@ public class P2_main {
 	}
 	
 	public static String shortenToLowerCase(String input, int shortenBy) {
-		int l=input.length();
-		String s=input.substring(0,l-shortenBy);
-		String d= s.toLowerCase();
-		return d;
-			
-	}
-
+		if(input.length()> shortenBy) {
+		input =input.substring(0,input.length()-shortenBy);
+		input = input.toLowerCase();
+		} else {return "";}
+return input;
+}
+	
 }
